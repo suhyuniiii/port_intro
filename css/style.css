@@ -1,0 +1,101 @@
+/*헤더*/
+#header{ z-index:3; position:fixed; top:0; left:0; width:100%; height:50px; padding:0 20px;  text-align:center; }
+/*헤더에 클래스 on이 붙었을 때*/
+#header.on{ background-image:url(../img/flower.jpg); background-position:center; background-repeat:no-repeat; background-size:cover; }
+#header .center{ position:relative; height:100%; }
+/*header > gnb*/
+#header .gnb{ display:flex; justify-content:right; align-items:center; }
+#header .gnb li{ margin:0 20px; line-height:50px; }
+#header .gnb li a{ color:#fff; font-size:18px; }
+
+/*sec1*/
+#main{ height:100vh; background-image:url(../img/flower.jpg); background-position:center; background-repeat:no-repeat; background-size:cover; overflow:hidden;  }
+#main .center{ position:relative; width:80%; height:100%; margin:0 auto; }
+#main .mainText{ z-index:4; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center;  }
+#main .mainText h3{  padding:0 10px; color:#fff; font-size:60px; font-weight:normal;  text-indent:20px; margin:20px 0; }
+
+/*sec2*/
+#about{ padding:120px 0; }
+#about .center{ display:flex; justify-content:space-between; width:80%; margin:0 auto; }
+/*profile, license skill 가로정렬*/
+#about .profile, #about .license, #about .skill{ position:relative; width:31.333333%; margin:0 1%; }
+/*제목 세로줄*/
+#about .center .topText h3:before{ content:""; display:inline-block; width:3px; height:23px; background-color:#d8b102; margin-right:10px; }
+#about .center .topText h3{ display:flex; align-items:center; color:#343438; font-size:22px; font-weight:normal; margin-bottom:40px; }
+/*내용*/
+#about .center .content h4{ font-family:'KoPubDotumMedium'; color:#343438; font-weight:normal;  font-size:17px; }
+#about .profile .content{ display:flex; margin-bottom:20px; }
+#about .profile .content h4:nth-child(1){ width:30%; margin-right:10px; }
+
+#about .license .content{ margin-bottom:20px; }
+#about .skill .content h4{ margin-bottom:20px; line-height:24px;}
+
+/*sec3*/
+#portfolio{ background-color:#f5f1f1; padding:120px 0; }
+#portfolio .pf_wrap{ width:80%; margin:0 auto; }
+/*제목 세로줄*/
+#portfolio .topText h4:before{ content:""; display:inline-block; width:3px; height:23px; background-color:#d8b102; margin-right:10px; }
+#portfolio .topText h4{ display:flex; align-items:center; color:#343438; font-size:22px; font-weight:normal; }
+
+/*스와이퍼 api*/
+.swiper { width: 100%; padding:50px 0; background-color:#f5f1f1; }
+
+.swiper-slide {background-position: center; background-size: cover; width: 80%;height: 100%;}
+.swiper-slide a:hover .bg {top:0;}
+
+.swiper-slide .title h4{ font-family:'KoPubDotumMedium'; color:#56413d; font-size:22px; text-align:center; font-weight:normal; margin-bottom:30px;}
+.swiper-slide .title h4 span{ color:#d8b102; font-size:40px; margin-right:10px;}
+.swiper-slide .title2 h4 span{ color:#f6831d;}
+.swiper-slide .title3 h4 span{ color:#fe1ba2;}
+.swiper-slide .title4 h4 span{ color:#c4141b;}
+
+.swiper-slide a { display:block;position:relative; }
+.swiper-slide a .bg { position:absolute; width:50%; height:100%; top:300%; left:0%; background-color:rgba(245, 245, 245, 0.85); transition:all 0.4s; } 
+.swiper-slide a .bg .detail {position:absolute;  width:90%; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center;}
+.swiper-slide a .bg .detail > div h5 {font-family:'KoPubDotumMedium'; color:#313232; font-size:17px; font-weight:normal; line-height:30px;}
+.swiper-slide a .bg .detail > div .last { color:#d8b102; font-size:19px; margin-top:20px;}
+.swiper-slide a .bg .detail > div .last2 { color:#f6831d; font-size:19px; margin-top:20px;}
+.swiper-slide a .bg .detail > div .last3 { color:#fe1ba2; font-size:19px; margin-top:20px;}
+.swiper-slide a .bg .detail > div .last4 { color:#c4141b; font-size:19px; margin-top:20px;}
+.swiper-slide img { display: block; width: 100%; }
+
+.swiper-button-prev, .swiper-button-next { color:#ffc400;--swiper-navigation-size:55px; }
+
+.swiper-horizontal > .swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, .swiper-pagination-fraction { bottom: 0px; display:flex; justify-content:center;  align-items:center;}
+.swiper-pagination-bullet{ width:15px; height:15px; background-color:#444; transition:all 0.5s; }
+.swiper-pagination-bullet-active{ width:50px; border-radius:20px; background-color:#ffc400; }
+
+/*sec4*/
+#contact{ padding:50px 0; }
+#contact .center{ width:72%; margin:0 auto; }
+/*제목 세로줄*/
+#contact .topText h4:before{ content:""; display:inline-block; width:3px; height:23px; background-color:#d8b102; margin-right:10px; }
+#contact .topText h4{ display:flex; align-items:center; justify-content:center; color:#343438; font-size:22px; font-weight:normal; }
+#contact .botText{ margin-top:20px; }
+#contact .botText> div{ display:flex; justify-content:center; align-items:center; }
+#contact .botText .phone{ margin-bottom:10px; }
+#contact .botText> div i{ font-size:25px; color:#343438; margin-right:10px; }
+#contact .botText > div h5{ color:#343438; font-size:18px; font-weight:normal;  }
+
+/*반응형*/
+@media (max-width:1200px) 
+{
+    /*sec2*/
+    #about .center { width:80%; }
+
+    /*sec3*/
+    #portfolio .pf_con .title .detail { flex-wrap:wrap; }
+    #portfolio .pf_con .title .detail > div { justify-content:center; width:100%; margin-bottom:14px; }  
+    #portfolio .pf_con .title .detail > div h5 { margin-right:0; margin:5px; }
+    
+}
+
+@media (max-width:1040px) 
+{
+    /*sec2*/
+    #about .center { flex-wrap:wrap; justify-content:center; }
+    #about .profile,#about .license,#about .skill { width:100%; margin:0%; margin-bottom:20px; }
+    #about .profile .content h4:nth-child(1) { width:20%; }
+}
