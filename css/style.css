@@ -38,7 +38,7 @@
 #portfolio .topText h4{ display:flex; align-items:center; color:#343438; font-size:22px; font-weight:normal; }
 
 /*스와이퍼 api*/
-.swiper { width: 100%; padding:50px 0; background-color:#f5f1f1; }
+.swiper { width:83%; padding:50px 0; background-color:#f5f1f1; }
 
 .swiper-slide {background-position: center; background-size: cover; width: 80%;height: 100%;}
 .swiper-slide a:hover .bg {top:0;}
