@@ -1,0 +1,11 @@
+#container{ background-image:url(../img/flower.jpg); background-repeat:no-repeat; background-position:center; background-size:cover; }
+#container .center{ position:relative; height:100vh;  padding-top:400px; }
+.loading_pause{ width:120px; height:120px; border:20px solid lightgray; border-radius:50%; margin:0 auto; transition:all 1s;  border-top:20px solid #eb4276; animation-name:movecircle; animation-duration:2s; animation-iteration-count:infinite; animation-timing-function:linear; transform:rotate(0deg);}
+.textloading{ color:#fff; font-size:20px; font-weight:normal; text-align:center; margin-top:25px; }
+
+
+@keyframes movecircle 
+{
+    0% {transform:rotate(0deg);}   
+    100% {transform:rotate(360deg);} 
+}
