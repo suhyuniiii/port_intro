@@ -1,4 +1,4 @@
 setTimeout(() => {
             
-    location.href="https://suhyuniiii.github.io/portfolio/";
+    location.href="main.html";
 }, 3000);
