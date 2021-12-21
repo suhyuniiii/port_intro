@@ -80,14 +80,50 @@ function typing(){
 };
 
 //마우스커서
+let mouseCursor = document.querySelector(".mousecursor");
 
-
-window.addEventListener("mousemove",(e)=>{
+window.addEventListener("mousemove",function(e){
 
     let posX = e.pageX;
     let posY = e.pageY;
 
-    document.querySelector(".mousecursor").style.left = posX+"px";
-    document.querySelector(".mousecursor").style.top = posY+"px";
+    mouseCursor.style.left = posX+"px";
+    mouseCursor.style.top = posY+"px";
 });
 
+let innerText = document.querySelector(".mousecursor .pointc");
+let imgswiper = document.querySelectorAll(".swiper-slide a");
+
+for(let i=0; i<gnb.length; i++)
+{
+    gnb[i].addEventListener("mouseenter",function(){
+
+        innerText.innerHTML = "click!";
+        innerText.style.fontSize = "28px";
+        mouseCursor.classList.add("on");
+    });
+
+    gnb[i].addEventListener("mouseleave",function(){
+
+        innerText.innerHTML = "+";
+        innerText.style.fontSize = "50px";
+        mouseCursor.classList.remove("on");
+    });
+}
+
+for(let i=0; i<imgswiper.length; i++)
+{
+    imgswiper[i].addEventListener("mouseenter",function(){
+
+        innerText.innerHTML = "click!";
+        innerText.style.fontSize = "28px";
+        mouseCursor.classList.add("on");
+    });
+
+    imgswiper[i].addEventListener("mouseleave",function(){
+
+        innerText.innerHTML = "+";
+        innerText.style.fontSize = "50px";
+        mouseCursor.classList.remove("on");
+    });
+}
