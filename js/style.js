@@ -82,48 +82,33 @@ function typing(){
 //마우스커서
 let mouseCursor = document.querySelector(".mousecursor");
 
-window.addEventListener("mousemove",function(e){
+//마우스 위치값 함수
+function mousedown(e) {
 
     let posX = e.pageX;
-    let posY = e.pageY;
+    let posY = e.pageY - scrollY;
 
     mouseCursor.style.left = posX+"px";
     mouseCursor.style.top = posY+"px";
-});
-
-let innerText = document.querySelector(".mousecursor .pointc");
-let imgswiper = document.querySelectorAll(".swiper-slide a");
+    
+}
 
 for(let i=0; i<gnb.length; i++)
 {
     gnb[i].addEventListener("mouseenter",function(){
 
-        innerText.innerHTML = "click!";
-        innerText.style.fontSize = "28px";
-        mouseCursor.classList.add("on");
+        window.addEventListener("mousemove",mousedown);
+
+        mouseCursor.classList.add("change");
+        
     });
 
     gnb[i].addEventListener("mouseleave",function(){
 
-        innerText.innerHTML = "+";
-        innerText.style.fontSize = "50px";
-        mouseCursor.classList.remove("on");
+        window.removeEventListener("mouseleave",mousedown);
+
+        mouseCursor.classList.remove("change");
+        
     });
 }
 
-for(let i=0; i<imgswiper.length; i++)
-{
-    imgswiper[i].addEventListener("mouseenter",function(){
-
-        innerText.innerHTML = "click!";
-        innerText.style.fontSize = "28px";
-        mouseCursor.classList.add("on");
-    });
-
-    imgswiper[i].addEventListener("mouseleave",function(){
-
-        innerText.innerHTML = "+";
-        innerText.style.fontSize = "50px";
-        mouseCursor.classList.remove("on");
-    });
-}

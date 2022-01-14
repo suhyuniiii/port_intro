@@ -1,8 +1,7 @@
 /*마우스커서*/
-.mousecursor {z-index:30000; width:100px; height:100px; background-color:rgba(245, 245, 245, 0.85); border:2px solid #000; border-radius:50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); transition:all 0.1s; pointer-events:none; }
-.mousecursor.on {width:130px; height:130px;}
-.mousecursor .pointc {font-size:50px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-weight:normal;}
-
+.mousecursor.change { z-index:30000; width:130px; height:130px; background-color:rgba(245, 245, 245, 0.85); border:2px solid #000; border-radius:50%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); transition:all 0.1s; pointer-events:none; }
+.mousecursor .pointc {font-size:30px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-weight:normal; opacity:0;}
+.mousecursor.change  .pointc {opacity:1;}
 /*헤더*/
 #header{ z-index:3; position:fixed; top:0; left:0; width:100%; height:50px; padding:0 20px;  text-align:center; }
 /*헤더에 클래스 on이 붙었을 때*/
@@ -20,10 +19,27 @@
 #main .mainText .typing{  padding:0 10px; color:#fff; font-size:60px; font-weight:normal;  text-indent:20px; margin:20px 0; }
 #main .mainText .typing:after {content:""; display:inline-block; width:2px; height:60px; position:relative; top:10px; margin-left:10px; background-color:#fff; animation-name:autoCursor; animation-duration:0.8s; animation-iteration-count:infinite;}
 
+#main .mouseani h3 { z-index:5; position:absolute; left:50%; transform:translateX(-50%); }
+#main .mouseani .mouseMove { bottom:140px; animation-name:mousedown1; animation-iteration-count:infinite; animation-duration:2s; animation-direction:alternate-reverse;}
+#main .mouseani .mousearrow { bottom: 100px; animation-name:mousedown2; animation-iteration-count:infinite; animation-duration:2s; animation-direction:alternate-reverse;}
+#main .mouseani i { font-size:35px; color:#fdfdfd; }
+
 @keyframes autoCursor
 {
     0% {opacity:0;}
     100% {opacity:1;}
+}
+
+@keyframes mousedown1 
+{
+    0% {bottom:140px;}
+    100% {bottom:100px;}    
+}
+
+@keyframes mousedown2
+{
+    0% {bottom:100px;}
+    100% {bottom:60px;}    
 }
 
 /*sec2*/
